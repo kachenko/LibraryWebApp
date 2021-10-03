@@ -1,0 +1,26 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div>
+        <h3>Katalog książek</h3>
+        <table>
+            <tr>
+                <td><p>Nazwa książki</p></td>
+                <td><p>Autor</p></td>
+                <td><p>Data wydania</p></td>
+                <td><p>Krótki opis</p></td>
+                <td></td>
+            </tr>
+            @foreach (var b in ViewBag.Books)
+            {
+        <tr>
+            <td><p>@b.Name</p></td>
+            <td><p>@b.Author</p></td>
+            <td><p>@b.ReleaseDate</p></td>
+            <td><p>@b.Description</p></td>
+            <td><p><a href="/Home/Buy/@b.BookID">Kupić</a></p></td>
+        </tr>
+            }
+        </table>
+    </div>

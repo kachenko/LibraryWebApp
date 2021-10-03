@@ -1,0 +1,22 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+    <div>
+        <h3>Forma dla rezerwacji</h3>
+        <form method="post" action="">
+            <input type="hidden" value="@ViewBag.BookID" name="BookId" />
+            <table>
+                <tr>
+                    <td><p>Wprowadź imię </p></td>
+                    <td><input type="text" name="FirstName" /> </td>
+                </tr>
+                <tr>
+                    <td><p>Wprowadź nazwisko </p></td>
+                    <td><input type="text" name="SecondName" /> </td>
+                </tr>
+                <tr><td><input type="submit" value="Potwierdzenie" /> </td><td></td></tr>
+            </table>
+        </form>
+    </div>
